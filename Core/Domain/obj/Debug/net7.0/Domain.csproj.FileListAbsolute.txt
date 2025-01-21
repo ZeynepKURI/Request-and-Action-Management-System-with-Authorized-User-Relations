@@ -1,14 +1,11 @@
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/bin/Debug/net7.0/Domain.deps.json
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/bin/Debug/net7.0/Domain.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/bin/Debug/net7.0/Domain.pdb
-/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/bin/Debug/net7.0/Application.dll
-/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/bin/Debug/net7.0/Application.pdb
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.csproj.AssemblyReference.cache
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
-/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.csproj.CopyComplete
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/refint/Domain.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/obj/Debug/net7.0/Domain.pdb

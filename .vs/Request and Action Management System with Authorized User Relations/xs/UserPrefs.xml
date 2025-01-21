@@ -1,31 +1,35 @@
-﻿<Properties StartupConfiguration="{16829278-BC97-4A7B-8E25-5210491047EE}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Application/DTOs/RegisterDto.cs">
+﻿<Properties StartupConfiguration="{DD0F4468-C2C6-46FA-ACBD-3610C49CD984}|https">
+  <MonoDevelop.Ide.ItemProperties.Presentation.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs">
     <Files>
-      <File FileName="Core/Domain/Entities/Request.cs" Line="1" Column="1" />
-      <File FileName="Core/Domain/Entities/Action.cs" Line="1" Column="1" />
-      <File FileName="Core/Domain/Entities/User.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/Action.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/Request.cs" Line="12" Column="1" />
-      <File FileName="Core/Application/DTOs/LoginDto.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/RegisterDto.cs" Line="12" Column="1" />
+      <File FileName="Core/Application/Interfaces/IAuthService.cs" Line="6" Column="3" />
+      <File FileName="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs" Line="11" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Request and Action Management System with Authorized User Relations" expanded="True" selected="True">
-            <Node name="Core" expanded="True" />
-            <Node name="Infrastructure" expanded="True" />
+          <Node name="Request and Action Management System with Authorized User Relations" expanded="True">
+            <Node name="Core" expanded="True">
+              <Node name="Application">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Infrastructure">
+              <Node name="Persistence">
+                <Node name="Dependencies" expanded="True" selected="True" />
+                <Node name="DependencyInjection" expanded="True" />
+              </Node>
+            </Node>
             <Node name="Presentation" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Presentation.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

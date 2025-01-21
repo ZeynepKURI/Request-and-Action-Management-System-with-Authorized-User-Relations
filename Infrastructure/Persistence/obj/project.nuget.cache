@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rntM6WiVAP0=",
+  "dgSpecHash": "jaw3RL8Jg0kx7nTq3xqnF4tz9GAa9KfofmS8cNul+oDO/D7f+GIJu0XpCRcjQUcOUGDKrBOSG/wIwz1+dRLV5Q==",
   "success": true,
   "projectFilePath": "/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/Persistence.csproj",
   "expectedPackageFiles": [
@@ -33,9 +33,7 @@
     "/Users/zeynepkuri/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/zeynepkuri/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/zeynepkuri/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/zeynepkuri/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
-    "/Users/zeynepkuri/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/zeynepkuri/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+    "/Users/zeynepkuri/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

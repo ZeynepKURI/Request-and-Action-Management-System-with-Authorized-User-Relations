@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <None Remove="Entities\" />
   </ItemGroup>
   <ItemGroup>
