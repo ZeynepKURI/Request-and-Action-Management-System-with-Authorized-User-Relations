@@ -15,11 +15,13 @@
     <None Remove="Service\" />
     <None Remove="Repository\" />
     <None Remove="UnitOfWorks\" />
+    <None Remove="DependencyInjection\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
     <Folder Include="Service\" />
     <Folder Include="Repository\" />
     <Folder Include="UnitOfWorks\" />
+    <Folder Include="DependencyInjection\" />
   </ItemGroup>
 </Project>
