@@ -10,6 +10,7 @@ using Application.Interfaces;
 using Persistence.Service;
 using Application.Interfaces.UnitOfWorks;
 using Persistence.UnitOfWorks;
+using Application.Interfaces.Service;
 
 namespace Persistence.DependencyInjection
 {
@@ -44,7 +45,7 @@ namespace Persistence.DependencyInjection
             });
 
 
-
+            services.AddScoped<IRequestService, RequestService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

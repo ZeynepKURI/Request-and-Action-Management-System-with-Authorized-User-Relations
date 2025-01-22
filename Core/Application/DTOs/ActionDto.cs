@@ -6,7 +6,7 @@ namespace Application.DTOs
 {
 	public class ActionDto
 	{
-
+        public int Id { get; set; }
         [Required]
         public string ActionDescription { get; set; }
 
