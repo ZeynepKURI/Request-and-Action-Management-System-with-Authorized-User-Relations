@@ -4,7 +4,7 @@ using Domain.Entities;
 
 namespace Application.DTOs
 {
-	public class Action
+	public class ActionDto
 	{
 
         [Required]
@@ -13,7 +13,6 @@ namespace Application.DTOs
         
         public int RequestId { get; set; }
 
-        public Request Request { get; set; }
     }
 }
 

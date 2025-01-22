@@ -15,9 +15,8 @@ namespace Application.DTOs
         [Required]
         public int UserId { get; set; }
 
-        public User User { get; set; }
 
-        public ICollection<Actions> actions { get; set; }
+        public ICollection<ActionDto> actions { get; set; }
     }
 }
 

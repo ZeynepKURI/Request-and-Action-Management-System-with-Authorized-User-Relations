@@ -1,17 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace Application.Interfaces
 {
-	public interface IRepository<T>   //IRepository<T>: Bu sınıf, generic bir yapı kullanır.
-                                      //T, sınıfın çalışacağı veri modelinin türünü temsil eder. 
-
-        where T : class      //where T : class: Generic tür T, yalnızca bir sınıf (referans türü) olabilir.                
-
+    // IRepository<T>: Generic repository arayüzü, burada T veri modelinin türünü temsil eder.
+    // where T : class: Generic tür T, yalnızca sınıf (referans türü) olabilir.
+    public interface IRepository<T> where T : class
     {
-		void Add(T entity);
-		void Update(T entity);
-		void Delete(T entity);
-		T GetById(int id);
-		IEnumerable<T> GetAll();
-	}
-}
+        // Asenkron olarak bir T türü nesnesini veritabanına ekler.
+        Task<T> AddAsync(T entity);
 
+        // Asenkron olarak bir T türü nesnesini veritabanında günceller.
+        Task<T> UpdateAsync(T entity);
+
+        // Asenkron olarak verilen id'ye sahip bir T türü nesnesini veritabanından siler.
+        Task<bool> DeleteAsync(int id);
+
+        // Asenkron olarak verilen id'ye sahip bir T türü nesnesini alır.
+        Task<T> GetByIdAsync(int id);
+
+        // Asenkron olarak veritabanındaki tüm T türündeki nesneleri alır.
+        Task<IEnumerable<T>> GetAllAsync();
+    }
+}
