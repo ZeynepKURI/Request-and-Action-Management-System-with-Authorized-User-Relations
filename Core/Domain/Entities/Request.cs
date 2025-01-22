@@ -17,3 +17,4 @@ namespace Domain.Entities
 	}
 }
 
+//Request ve Action arasındaki ilişkiyi bir One-to-Many ilişkisi olarak tanımlıyoruz.
