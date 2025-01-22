@@ -7,7 +7,7 @@ namespace Application.Interfaces.UnitOfWorks
 	{
 		IRepository <Request> Requests { get; }
 
-		IRepository< Action> Actions { get; }
+		IRepository< Actions> Actions { get; }
 
 		void Commit();
 	}

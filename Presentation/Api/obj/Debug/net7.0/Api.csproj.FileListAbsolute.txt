@@ -5,6 +5,7 @@
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/bin/Debug/net7.0/Api.runtimeconfig.json
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/bin/Debug/net7.0/Api.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/bin/Debug/net7.0/Api.pdb
+/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/bin/Debug/net7.0/AutoMapper.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/bin/Debug/net7.0/BCrypt.Net-Core.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/bin/Debug/net7.0/Humanizer.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

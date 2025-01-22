@@ -11,7 +11,7 @@ namespace Persistence.UnitOfWorks
     {
         private readonly AppDbContext _context;
         private Repository <Request> _requests;
-        private Repository<Action> _actions;
+        private Repository<Actions> _actions;
         public UnitOfWork( AppDbContext context)
         {
             _context = context;
@@ -19,7 +19,7 @@ namespace Persistence.UnitOfWorks
 
         public IRepository<Request> Requests => _requests ??= new Repository<Request>(_context);
 
-        public IRepository<Action> Actions => _actions ??= new Repository<Action>(_context);                  
+        public IRepository<Actions> Actions => _actions ??= new Repository<Actions>(_context);                  
 
 
 

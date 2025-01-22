@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "j/Nb6cXl/3Pv5U1fjfTBKZtieaJpHG8zFfuxwZYXdKu9LQThT4gi337L6cW1IWyXrYR3z2SJ3uToZHpvXBnrpA==",
+  "dgSpecHash": "6zNbQrWumJgAqlhYn8db8+saWcCJzgo3k9T3GbZDLhV/7UwGePH55B4/qT3Ck8Hd5lIm2qTerss/f/wx8C6Anw==",
   "success": true,
   "projectFilePath": "/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/zeynepkuri/.nuget/packages/automapper/7.0.1/automapper.7.0.1.nupkg.sha512",
+    "/Users/zeynepkuri/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
