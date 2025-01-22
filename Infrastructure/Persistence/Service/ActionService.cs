@@ -3,7 +3,7 @@ using Application.Interfaces.Service;
 using Application.Interfaces.UnitOfWorks;
 using Domain.Entities;
 
-namespace Application.Services
+namespace Persistence.Services
 {
     public class ActionService : IActionService
     {

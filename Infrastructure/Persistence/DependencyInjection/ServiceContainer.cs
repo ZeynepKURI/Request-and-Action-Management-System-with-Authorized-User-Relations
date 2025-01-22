@@ -11,7 +11,7 @@ using Persistence.Service;
 using Application.Interfaces.UnitOfWorks;
 using Persistence.UnitOfWorks;
 using Application.Interfaces.Service;
-using Application.Services;
+using Persistence.Services;
 
 namespace Persistence.DependencyInjection
 {
