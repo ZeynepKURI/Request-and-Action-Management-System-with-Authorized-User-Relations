@@ -9,4 +9,14 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Interfaces\UnitOfWorks\" />
+    <None Remove="Interfaces\Repository\" />
+    <None Remove="Interfaces\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\UnitOfWorks\" />
+    <Folder Include="Interfaces\Repository\" />
+    <Folder Include="Interfaces\Service\" />
+  </ItemGroup>
 </Project>
