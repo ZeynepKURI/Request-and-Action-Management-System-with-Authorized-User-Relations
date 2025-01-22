@@ -4,27 +4,25 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Application/DTOs/RequestDto.cs">
     <Files>
-      <File FileName="Core/Application/Interfaces/IAuthService.cs" Line="6" Column="3" />
-      <File FileName="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs" Line="11" Column="70" />
+      <File FileName="Core/Application/DTOs/ActionDto.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/DTOs/LoginDto.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/DTOs/LoginResponse.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/DTOs/RegisterDto.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/DTOs/RegisterResponse.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/DTOs/RequestDto.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Request and Action Management System with Authorized User Relations" expanded="True">
+          <Node name="Request and Action Management System with Authorized User Relations" selected="True">
             <Node name="Core" expanded="True">
-              <Node name="Application">
+              <Node name="Application" expanded="True">
+                <Node name="DTOs" expanded="True" />
                 <Node name="Interfaces" expanded="True" />
               </Node>
             </Node>
-            <Node name="Infrastructure">
-              <Node name="Persistence">
-                <Node name="Dependencies" expanded="True" selected="True" />
-                <Node name="DependencyInjection" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Presentation" expanded="True" />
           </Node>
         </State>
       </Pad>

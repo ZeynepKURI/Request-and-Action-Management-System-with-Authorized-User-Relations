@@ -1,11 +1,23 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using Domain.Entities;
+
 namespace Application.DTOs
 {
-	public class Request
+	public class RequestDto
 	{
-		public Request()
-		{
-		}
-	}
+        [Required]
+        public string Title { get; set; }
+
+        [Required]
+        public string Description { get; set; }
+
+        [Required]
+        public int UserId { get; set; }
+
+        public User User { get; set; }
+
+        public ICollection<Actions> actions { get; set; }
+    }
 }
 
