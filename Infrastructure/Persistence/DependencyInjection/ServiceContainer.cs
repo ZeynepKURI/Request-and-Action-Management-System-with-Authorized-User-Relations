@@ -8,6 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 using Persistence.Context;
 using Application.Interfaces;
 using Persistence.Service;
+using Application.Interfaces.UnitOfWorks;
+using Persistence.UnitOfWorks;
 
 namespace Persistence.DependencyInjection
 {
@@ -44,6 +46,8 @@ namespace Persistence.DependencyInjection
 
 
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             return services;
         }
     }

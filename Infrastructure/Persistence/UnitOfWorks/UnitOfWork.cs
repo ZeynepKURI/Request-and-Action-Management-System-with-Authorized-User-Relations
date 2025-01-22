@@ -21,14 +21,16 @@ namespace Persistence.UnitOfWorks
 
         public IRepository<Action> Actions => _actions ??= new Repository<Action>(_context);                  
 
-        public void Commit()
+
+
+        public void Commit() //Birden fazla repository ile çalışıyorsanız, bu metot tüm değişiklikleri tek bir noktada kaydetmenizi sağlar.
         {
-            throw new NotImplementedException();
+            _context.SaveChanges(); // Değişiklikleri kaydet
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _context.Dispose();  //Dispose() metodu çağrıldığında, açık olan veritabanı bağlantısı kapatılır ve tüm kaynaklar temizlenir.
         }
     }
 }

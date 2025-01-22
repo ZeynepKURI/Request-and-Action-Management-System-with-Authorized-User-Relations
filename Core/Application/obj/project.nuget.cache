@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "214lx5nr6fY=",
+  "dgSpecHash": "j/Nb6cXl/3Pv5U1fjfTBKZtieaJpHG8zFfuxwZYXdKu9LQThT4gi337L6cW1IWyXrYR3z2SJ3uToZHpvXBnrpA==",
   "success": true,
   "projectFilePath": "/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/Application.csproj",
-  "expectedPackageFiles": [
-    "/Users/zeynepkuri/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/zeynepkuri/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

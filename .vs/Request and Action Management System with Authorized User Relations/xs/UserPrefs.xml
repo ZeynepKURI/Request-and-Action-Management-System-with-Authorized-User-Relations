@@ -1,18 +1,7 @@
 ﻿<Properties StartupConfiguration="{DD0F4468-C2C6-46FA-ACBD-3610C49CD984}|https">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Presentation.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Application/DTOs/RequestDto.cs">
-    <Files>
-      <File FileName="Core/Application/DTOs/ActionDto.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/LoginDto.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/LoginResponse.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/RegisterDto.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/RegisterResponse.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/RequestDto.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -20,7 +9,26 @@
             <Node name="Core" expanded="True">
               <Node name="Application" expanded="True">
                 <Node name="DTOs" expanded="True" />
-                <Node name="Interfaces" expanded="True" />
+                <Node name="Interfaces" expanded="True">
+                  <Node name="Repository" expanded="True" />
+                  <Node name="UnitOfWorks" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Domain" expanded="True">
+                <Node name="Entities" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Persistence" expanded="True">
+                <Node name="DependencyInjection" expanded="True" />
+                <Node name="Repository" expanded="True" />
+                <Node name="Service" expanded="True" />
+                <Node name="UnitOfWorks" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Presentation" expanded="True">
+              <Node name="Api" expanded="True">
+                <Node name="Controllers" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -28,6 +36,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
