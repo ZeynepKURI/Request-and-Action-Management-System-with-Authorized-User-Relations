@@ -6,6 +6,8 @@ namespace Application.DTOs
 {
 	public class RequestDto
 	{
+
+        public int Id { get; set; }
         [Required]
         public string Title { get; set; }
 
