@@ -1,35 +1,32 @@
 ﻿<Properties StartupConfiguration="{DD0F4468-C2C6-46FA-ACBD-3610C49CD984}|https">
   <MonoDevelop.Ide.ItemProperties.Presentation.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Presentation/Api/Controllers/ActionController.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Application/DTOs/ActionDto.cs">
     <Files>
-      <File FileName="Infrastructure/Persistence/Service/ActionService.cs" Line="1" Column="3" />
-      <File FileName="Presentation/Api/Controllers/ActionController.cs" Line="5" Column="1" />
-      <File FileName="Presentation/Api/Controllers/RequestController.cs" Line="39" Column="14" />
-      <File FileName="Infrastructure/Persistence/Service/RequestService.cs" Line="1" Column="1" />
-      <File FileName="Core/Application/DTOs/RequestDto.cs" Line="25" Column="1" />
+      <File FileName="Core/Domain/Entities/Actions.cs" />
+      <File FileName="Core/Application/DTOs/ActionDto.cs" Line="12" Column="1" />
+      <File FileName="Core/Domain/Entities/Request.cs" />
+      <File FileName="Core/Application/DTOs/RequestDto.cs" />
+      <File FileName="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs" />
+      <File FileName="Infrastructure/Persistence/Service/ActionService.cs" />
+      <File FileName="Infrastructure/Persistence/Service/RequestService.cs" />
+      <File FileName="Infrastructure/Persistence/UnitOfWorks/UnitOfWork.cs" />
+      <File FileName="Infrastructure/Persistence/Repository/Repository.cs" />
+      <File FileName="Core/Domain/Entities/User.cs" />
+      <File FileName="Core/Application/DTOs/RegisterDto.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Request and Action Management System with Authorized User Relations">
+          <Node name="Request and Action Management System with Authorized User Relations" expanded="True">
             <Node name="Core" expanded="True">
               <Node name="Application">
-                <Node name="Mapping" expanded="True" />
+                <Node name="DTOs" expanded="True" />
               </Node>
-            </Node>
-            <Node name="Infrastructure">
-              <Node name="Persistence">
-                <Node name="Service" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Presentation">
-              <Node name="Api">
-                <Node name="Controllers" expanded="True">
-                  <Node name="ActionController.cs" selected="True" />
-                </Node>
+              <Node name="Domain">
+                <Node name="Entities" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -37,7 +34,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

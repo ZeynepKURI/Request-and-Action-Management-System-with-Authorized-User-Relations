@@ -241,9 +241,9 @@
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/staticwebassets.build.json
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/staticwebassets.development.json
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/scopedcss/bundle/Api.styles.css
-/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/Api.csproj.CopyComplete
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/Api.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/refint/Api.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/Api.pdb
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/Api.genruntimeconfig.cache
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/ref/Api.dll
+/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Presentation/Api/obj/Debug/net7.0/Api.csproj.CopyComplete

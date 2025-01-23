@@ -1,7 +1,8 @@
 ﻿using System;
 using Application.DTOs;
 using AutoMapper;
-using Domain.Entities;
+using Core.Entities;
+
 
 namespace Application.Mapping
 {

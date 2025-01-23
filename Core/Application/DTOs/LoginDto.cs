@@ -1,15 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace Application.DTOs
+﻿namespace Application.DTOs
 {
-	public class LoginDto
-	{
-		[Required, EmailAddress]
-		public string Email { get; set; }
-
-		[Required]
-		public string Password { get; set; }
-	}
+    public class LoginDto
+    {
+        public string Email { get; set; } // Kullanıcı girişi için Email
+        public string Password { get; set; } // Kullanıcı girişi için Şifre
+    }
 }
-

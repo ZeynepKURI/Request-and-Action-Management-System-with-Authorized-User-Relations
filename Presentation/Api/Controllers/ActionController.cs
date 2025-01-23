@@ -3,10 +3,10 @@ using Application.Interfaces.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.Controllers
+namespace WebAPI.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class ActionController : ControllerBase
     {
         private readonly IActionService _actionService;
@@ -16,97 +16,76 @@ namespace WebApi.Controllers
             _actionService = actionService;
         }
 
-        // Tüm aksiyonları getiren GET metodu
+        // Kullanıcıların aksiyonları görmesi sağlanır.
         [HttpGet]
-        [Authorize(Roles = "User")]
+        [Authorize(Policy = "User")]
         public async Task<IActionResult> GetAllActions()
         {
-            try
-            {
-                var actions = await _actionService.GetAllActionsAsync();
-                return Ok(actions);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var actions = await _actionService.GetAllActionsAsync();
+            return Ok(actions);
         }
 
-        // ID'ye göre bir aksiyon getiren GET metodu
+        // Aksiyon ID'ye göre alınabilir.
         [HttpGet("{id}")]
-        [Authorize(Roles = "User")]
+        [Authorize(Policy = "User")]
         public async Task<IActionResult> GetActionById(int id)
         {
             try
             {
                 var action = await _actionService.GetActionByIdAsync(id);
-                if (action == null)
-                {
-                    return NotFound($"Action with id {id} not found");
-                }
                 return Ok(action);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
             }
         }
 
-        // Yeni bir aksiyon oluşturmak için kullanılan POST metodu
+        // Adminler aksiyon oluşturabilir, atanan kullanıcıyı belirleyebilir
         [HttpPost]
-        [Authorize(Roles = "User")]
+        [Authorize(Policy = "Admin")]
         public async Task<IActionResult> CreateAction([FromBody] ActionDto actionDto)
         {
-            if (actionDto == null)
-            {
-                return BadRequest("Action data is required");
-            }
-
             try
             {
                 await _actionService.CreateActionAsync(actionDto);
                 return CreatedAtAction(nameof(GetActionById), new { id = actionDto.Id }, actionDto);
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                return BadRequest(ex.Message);
+                return Unauthorized(ex.Message);
             }
         }
 
-        // Var olan bir aksiyonu güncellemek için kullanılan PUT metodu
+        // Adminler aksiyon güncelleyebilir
         [HttpPut("{id}")]
-        [Authorize(Roles = "User")]
+        [Authorize(Policy = "Admin")]
         public async Task<IActionResult> UpdateAction(int id, [FromBody] ActionDto actionDto)
         {
-            if (actionDto == null)
-            {
-                return BadRequest("Action data is required");
-            }
-
             try
             {
                 await _actionService.UpdateActionAsync(id, actionDto);
-                return NoContent(); // 204 No Content
+                return NoContent();
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                return BadRequest(ex.Message);
+                return Unauthorized(ex.Message);
             }
         }
 
-        // Var olan bir aksiyonu silmek için kullanılan DELETE metodu
+        // Adminler aksiyon silebilir
         [HttpDelete("{id}")]
-        [Authorize(Roles = "User")]
+        [Authorize(Policy = "Admin")]
         public async Task<IActionResult> DeleteAction(int id)
         {
             try
             {
                 await _actionService.DeleteActionAsync(id);
-                return NoContent(); // 204 No Content
+                return NoContent();
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                return BadRequest(ex.Message);
+                return Unauthorized(ex.Message);
             }
         }
     }

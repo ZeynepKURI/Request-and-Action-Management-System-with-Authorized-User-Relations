@@ -3,136 +3,105 @@ using Application.Interfaces.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-
-namespace WebApi.Controllers
+namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserRequestsController : ControllerBase
+    public class RequestController : ControllerBase
     {
         private readonly IRequestService _requestService;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public UserRequestsController(IRequestService requestService, IHttpContextAccessor httpContextAccessor)
+        public RequestController(IRequestService requestService)
         {
             _requestService = requestService;
-            _httpContextAccessor = httpContextAccessor;
         }
 
-        // Get all requests for the logged-in user
+        // Tüm talepleri almak için
         [HttpGet]
-        [Authorize(Roles = "User")]
-        public async Task<ActionResult<IEnumerable<RequestDto>>> GetRequestsByUserId()
+        [Authorize(Policy = "User")]
+        public async Task<IActionResult> GetAllRequests()
         {
-            try
-            {
-                // UserId'yi alıyoruz (token'dan veya başka bir kaynaktan)
-                var userId = int.Parse(User.Identity.Name);
-
-                // Servis katmanından kullanıcının taleplerini alıyoruz
-                var requests = await _requestService.GetAllRequestsAsync(userId);
-
-                // Talepler varsa, başarıyla döndürüyoruz
-                return Ok(requests);
-            }
-            catch (Exception ex)
-            {
-                // Hata durumunda geri dönüyoruz
-                return BadRequest(ex.Message);
-            }
+            var requests = await _requestService.GetAllRequestsAsync();
+            return Ok(requests);
         }
 
-        // Get a specific request by ID for the logged-in user
+        // ID'ye göre tek bir talebi almak için
         [HttpGet("{id}")]
-        [Authorize(Roles = "User")]
-        public async Task<ActionResult<RequestDto>> GetRequestById(int id)
+        [Authorize(Policy = "User")]
+        public async Task<IActionResult> GetRequestById(int id)
         {
             try
             {
-                // UserId'yi alıyoruz
-                var userId = int.Parse(User.Identity.Name);
-
-                // Servis katmanından belirtilen ID'ye ait talebi alıyoruz
-                var request = await _requestService.GetRequestByIdAsync(id, userId);
-
-                // Talep bulunursa, başarıyla döndürüyoruz
+                var request = await _requestService.GetRequestByIdAsync(id);
                 return Ok(request);
             }
             catch (Exception ex)
             {
-                // Hata durumunda geri dönüyoruz
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
             }
         }
 
-        // Create a new request for the logged-in user
+        // Yeni bir talep oluşturmak için
         [HttpPost]
-        [Authorize(Roles = "User")]
-        public async Task<ActionResult> CreateRequest([FromBody] RequestDto requestDto)
+        [Authorize(Policy = "Admin")]
+        public async Task<IActionResult> CreateRequest([FromBody] RequestDto requestDto)
         {
             try
             {
-                // UserId'yi alıyoruz ve requestDto'ya ekliyoruz
-                var userId = int.Parse(User.Identity.Name);
-                requestDto.UserId = userId;
-
-                // Servis katmanına yeni talebi oluşturma isteği gönderiyoruz
                 await _requestService.CreateRequestAsync(requestDto);
-
-                // Başarılı ise, cevap döndürüyoruz
-                return Ok("Request created successfully");
+                return CreatedAtAction(nameof(GetRequestById), new { id = requestDto.Id }, requestDto);
             }
             catch (Exception ex)
             {
-                // Hata durumunda geri dönüyoruz
                 return BadRequest(ex.Message);
             }
         }
 
-        // Update an existing request for the logged-in user
+        // Bir talebi güncellemek için
         [HttpPut("{id}")]
-        [Authorize(Roles = "User")]
-        public async Task<ActionResult> UpdateRequest(int id, [FromBody] RequestDto requestDto)
+        [Authorize(Policy = "Admin")]
+        public async Task<IActionResult> UpdateRequest(int id, [FromBody] RequestDto requestDto)
         {
             try
             {
-                // UserId'yi alıyoruz ve requestDto'ya ekliyoruz
-                var userId = int.Parse(User.Identity.Name);
-                requestDto.UserId = userId;
-
-                // Servis katmanına talebi güncelleme isteği gönderiyoruz
                 await _requestService.UpdateRequestAsync(id, requestDto);
-
-                // Başarılı ise, cevap döndürüyoruz
-                return Ok("Request updated successfully");
+                return NoContent();
             }
             catch (Exception ex)
             {
-                // Hata durumunda geri dönüyoruz
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
             }
         }
 
-        // Delete a request for the logged-in user
+        // Bir talebi silmek için
         [HttpDelete("{id}")]
-        [Authorize(Roles = "User")]
-        public async Task<ActionResult> DeleteRequest(int id)
+        [Authorize(Policy = "Admin")]
+        public async Task<IActionResult> DeleteRequest(int id)
         {
             try
             {
-                // UserId'yi alıyoruz
-                var userId = int.Parse(User.Identity.Name);
-
-                // Servis katmanına talebi silme isteği gönderiyoruz
-                await _requestService.DeleteRequestAsync(id, userId);
-
-                // Başarılı ise, cevap döndürüyoruz
-                return Ok("Request deleted successfully");
+                await _requestService.DeleteRequestAsync(id);
+                return NoContent();
             }
             catch (Exception ex)
             {
-                // Hata durumunda geri dönüyoruz
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
+            }
+        }
+
+        // Talep statüsünü güncellemek için
+        [HttpPut("{id}/status")]
+        [Authorize(Policy = "Admin")]
+        public async Task<IActionResult> UpdateRequestStatus(int id, [FromBody] string status)
+        {
+            try
+            {
+                await _requestService.UpdateRequestStatusAsync(id, status);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
             }
         }
     }

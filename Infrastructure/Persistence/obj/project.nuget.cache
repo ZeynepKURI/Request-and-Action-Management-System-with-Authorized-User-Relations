@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3we3wHErTt7h3A0mfg5oOJ3z35jvh77n7tWciCW4XEg3FxB/tiybf4NDbUGT24zMRi/lr+siQ4yKrJIy2UpjIQ==",
+  "dgSpecHash": "t15kiUdUYa8=",
   "success": true,
   "projectFilePath": "/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/Persistence.csproj",
   "expectedPackageFiles": [
@@ -55,7 +55,9 @@
     "/Users/zeynepkuri/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/zeynepkuri/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/zeynepkuri/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
-    "/Users/zeynepkuri/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512"
+    "/Users/zeynepkuri/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
+    "/Users/zeynepkuri/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/zeynepkuri/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,24 +1,13 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using Domain.Entities;
-
-namespace Application.DTOs
+﻿namespace Application.DTOs
 {
-	public class RequestDto
-	{
-
+    public class RequestDto
+    {
         public int Id { get; set; }
-        [Required]
         public string Title { get; set; }
-
-        [Required]
         public string Description { get; set; }
-
-        [Required]
-        public int UserId { get; set; }
-
-
-        public ICollection<ActionDto> actions { get; set; }
+        public int UserId { get; set; }  // Foreign Key
+        public string Status { get; set; } // "Pending", "InProgress", "Completed"
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }
-

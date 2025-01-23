@@ -11,9 +11,9 @@
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfoInputs.cache
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfo.cs
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.CoreCompileInputs.cache
-/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.CopyComplete
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/refint/Persistence.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.pdb
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.genruntimeconfig.cache
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/ref/Persistence.dll
+/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Infrastructure/Persistence/obj/Debug/net7.0/Persistence.csproj.CopyComplete

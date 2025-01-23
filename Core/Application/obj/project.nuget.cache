@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6zNbQrWumJgAqlhYn8db8+saWcCJzgo3k9T3GbZDLhV/7UwGePH55B4/qT3Ck8Hd5lIm2qTerss/f/wx8C6Anw==",
+  "dgSpecHash": "3YPQmSzc/QI=",
   "success": true,
   "projectFilePath": "/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/zeynepkuri/.nuget/packages/automapper/7.0.1/automapper.7.0.1.nupkg.sha512",
-    "/Users/zeynepkuri/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512"
+    "/Users/zeynepkuri/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512",
+    "/Users/zeynepkuri/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/zeynepkuri/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }

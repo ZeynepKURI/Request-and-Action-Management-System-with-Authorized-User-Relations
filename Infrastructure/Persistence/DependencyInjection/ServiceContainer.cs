@@ -7,12 +7,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Persistence.Context;
 using Application.Interfaces;
-using Persistence.Service;
+
 using Application.Interfaces.UnitOfWorks;
 using Persistence.UnitOfWorks;
 using Application.Interfaces.Service;
 using Persistence.Services;
 using Application.Mapping;
+using Infrastructure.Data;
 
 namespace Persistence.DependencyInjection
 {
@@ -45,10 +46,17 @@ namespace Persistence.DependencyInjection
                         Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!))
                 };
             });
+            services.AddAuthorization(options =>
+            {
+                // 'User' rolü için politika
+                options.AddPolicy("User", policy => policy.RequireRole("User"));
+
+                // 'Admin' rolü için politika
+                options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+            });
 
 
-
-         
+            services.AddHttpContextAccessor();
             services.AddScoped<IRequestService, RequestService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
