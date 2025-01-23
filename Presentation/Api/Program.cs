@@ -1,5 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
-
+using Application.Mapping;
+using AutoMapper;
 using Persistence.DependencyInjection; // ServiceContainer'ın bulunduğu namespace 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 
-
+builder.Services.AddAutoMapper(typeof(AutoMapping).Assembly);
 
 builder.Services.AddSwaggerGen(swagger =>
 {

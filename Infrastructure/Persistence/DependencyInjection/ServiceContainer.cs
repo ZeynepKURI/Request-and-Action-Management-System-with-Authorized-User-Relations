@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +12,7 @@ using Application.Interfaces.UnitOfWorks;
 using Persistence.UnitOfWorks;
 using Application.Interfaces.Service;
 using Persistence.Services;
+using Application.Mapping;
 
 namespace Persistence.DependencyInjection
 {
@@ -46,6 +47,8 @@ namespace Persistence.DependencyInjection
             });
 
 
+
+         
             services.AddScoped<IRequestService, RequestService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();

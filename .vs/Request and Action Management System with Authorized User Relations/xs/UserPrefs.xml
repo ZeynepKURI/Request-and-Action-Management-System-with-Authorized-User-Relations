@@ -1,43 +1,36 @@
 ﻿<Properties StartupConfiguration="{DD0F4468-C2C6-46FA-ACBD-3610C49CD984}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Presentation.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Presentation/Api/Program.cs">
+    <Files>
+      <File FileName="Presentation/Api/Program.cs" Line="3" Column="2" />
+      <File FileName="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs" Line="49" Column="13" />
+      <File FileName="Core/Application/Mapping/AutoMapping.cs" Line="20" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Request and Action Management System with Authorized User Relations" selected="True">
+          <Node name="Request and Action Management System with Authorized User Relations" expanded="True" selected="True">
             <Node name="Core" expanded="True">
-              <Node name="Application" expanded="True">
-                <Node name="DTOs" expanded="True" />
-                <Node name="Interfaces" expanded="True">
-                  <Node name="Repository" expanded="True" />
-                  <Node name="UnitOfWorks" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Domain" expanded="True">
-                <Node name="Entities" expanded="True" />
+              <Node name="Application">
+                <Node name="Mapping" expanded="True" />
               </Node>
             </Node>
             <Node name="Infrastructure" expanded="True">
-              <Node name="Persistence" expanded="True">
-                <Node name="DependencyInjection" expanded="True" />
-                <Node name="Repository" expanded="True" />
-                <Node name="Service" expanded="True" />
-                <Node name="UnitOfWorks" expanded="True" />
+              <Node name="Persistence">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
               </Node>
             </Node>
-            <Node name="Presentation" expanded="True">
-              <Node name="Api" expanded="True">
-                <Node name="Controllers" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="Presentation" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,57 +1,51 @@
 ﻿using Application.DTOs;
 using Application.Interfaces.Service;
 using Application.Interfaces.UnitOfWorks;
+using AutoMapper;
 using Domain.Entities;
+using Microsoft.Extensions.Logging;
 
 namespace Persistence.Services
 {
     public class ActionService : IActionService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+        private readonly ILogger<ActionService> _logger;
 
-        public ActionService(IUnitOfWork unitOfWork)
+
+        public ActionService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<ActionService> logger)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<ActionDto>> GetAllActionsAsync()
         {
             var actions = await _unitOfWork.Actions.GetAllAsync();
-            return actions.Select(a => new ActionDto
-            {
-                Id = a.Id,
-                ActionDescription = a.ActionDescription,
-                RequestId = a.RequestId
-            });
+            return _mapper.Map<IEnumerable<ActionDto>>(actions);
         }
 
-        public async Task<ActionDto> GetActionByIdAsync(int id)
+            public async Task<ActionDto> GetActionByIdAsync(int id)
         {
             var action = await _unitOfWork.Actions.GetByIdAsync(id);
             if (action == null)
             {
+                _logger.LogWarning($"Action with ID {id} not found.");
                 throw new Exception("Action not found");
             }
 
-            return new ActionDto
-            {
-                Id = action.Id,
-                ActionDescription = action.ActionDescription,
-                RequestId = action.RequestId
-            };
+            return _mapper.Map<ActionDto>(action);
         }
 
         public async Task CreateActionAsync(ActionDto actionDto)
         {
-            var action = new Actions
-            {
-                ActionDescription = actionDto.ActionDescription,
-                RequestId = actionDto.RequestId  // Bu Action'ın hangi Request'e ait olduğunu belirtir
-            };
-
+            var action = _mapper.Map<Actions>(actionDto);
             await _unitOfWork.Actions.AddAsync(action);
-            _unitOfWork.Commit(); // Commit all changes in one transaction
+             _unitOfWork.Commit();
         }
+    
 
         public async Task UpdateActionAsync(int id, ActionDto actionDto)
         {
@@ -61,11 +55,9 @@ namespace Persistence.Services
                 throw new Exception("Action not found");
             }
 
-            action.ActionDescription = actionDto.ActionDescription;
-            action.RequestId = actionDto.RequestId;
-
+            _mapper.Map(actionDto, action);
             await _unitOfWork.Actions.UpdateAsync(action);
-           _unitOfWork.Commit(); // Commit all changes in one transaction
+         _unitOfWork.Commit();
         }
 
         public async Task DeleteActionAsync(int id)
