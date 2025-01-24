@@ -4,6 +4,8 @@ namespace Application.DTOs
     public class RequestDto
     {
         public int Id { get; set; }
+
+        // Talebi oluşturan kullanıcının ID'si
         public int CreatedById { get; set; } // Talebi oluşturan kullanıcının ID'si
         public string Title { get; set; }
         public string Description { get; set; }

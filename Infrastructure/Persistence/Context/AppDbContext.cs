@@ -5,11 +5,16 @@ using Microsoft.EntityFrameworkCore;
 namespace Infrastructure.Data
 {
     public class AppDbContext : DbContext
-    { 
-      public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+
+        // AppDbContext sınıfı, veritabanı işlemleri için kullanılan Entity Framework Core DbContext sınıfını türetir
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }
-    public DbSet<Request> Requests { get; set; }
+
+        // DbSet'ler: Veritabanı tablolarına karşılık gelen özellikler
+        // Bu özellikler, uygulamanın erişebileceği koleksiyonları temsil eder.
+        public DbSet<Request> Requests { get; set; }
         public DbSet<Actions> Actions { get; set; }
         public DbSet<User> Users { get; set; }
 

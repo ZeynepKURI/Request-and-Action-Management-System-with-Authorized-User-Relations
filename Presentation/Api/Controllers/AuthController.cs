@@ -4,27 +4,32 @@ using Application.Interfaces.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers
+
 {
+    // AuthController: Kimlik doğrulama ve yetkilendirme işlemleri için API endpointlerini içerir.
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthService _authService;
+        private readonly IAuthService _authService;   // Kimlik doğrulama işlemleri için kullanılan servis.
 
+
+        // Dependency Injection (Bağımlılık enjeksiyonu) ile kimlik doğrulama servisi alınır.
         public AuthController(IAuthService authService)
         {
-            _authService = authService;
+            _authService = authService;  // Service instance'ı sınıfa atanır.
         }
 
-        // Register (Kayıt Ol)
+        // Kullanıcı kayıt işlemini gerçekleştiren endpoint.
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto registerDto)
         {
             var result = await _authService.RegisterAsync(registerDto);
-            return Ok(new { message = result });
+            return Ok(new { message = result });  // Kayıt başarılı olursa bir mesaj döndürülür.
         }
 
-        // Login (Giriş Yap)
+        // Kullanıcı giriş işlemini gerçekleştiren endpoint.
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto loginDto)
         {
@@ -40,7 +45,8 @@ namespace Api.Controllers
             return Ok("Bu işlem sadece Admin tarafından yapılabilir.");
         }
 
-        // Kullanıcı işlemleri (Sadece User ve Admin erişebilir)
+        // Hem User hem de Admin rollerinin erişebileceği bir işlem.
+
         [HttpGet("user-action")]
         [Authorize(Roles = "User,Admin")]
         public IActionResult UserAction()
