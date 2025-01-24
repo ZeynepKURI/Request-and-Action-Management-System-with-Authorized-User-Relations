@@ -3,8 +3,7 @@ using Application.Interfaces;
 using Application.Interfaces.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
-namespace API.Controllers
+namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

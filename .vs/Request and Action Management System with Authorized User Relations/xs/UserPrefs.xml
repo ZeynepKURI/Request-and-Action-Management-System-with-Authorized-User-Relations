@@ -1,21 +1,40 @@
 ﻿<Properties StartupConfiguration="{DD0F4468-C2C6-46FA-ACBD-3610C49CD984}|https">
-  <MonoDevelop.Ide.ItemProperties.Presentation.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Domain/Entities/User.cs" relfile="Core/Domain/Entities/User.cs" line="18" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Application/DTOs/ActionDto.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Presentation.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/Persistence/Service/RequestService.cs">
     <Files>
-      <File FileName="Core/Domain/Entities/Actions.cs" />
-      <File FileName="Core/Application/DTOs/ActionDto.cs" Line="12" Column="1" />
-      <File FileName="Core/Domain/Entities/Request.cs" />
-      <File FileName="Core/Application/DTOs/RequestDto.cs" />
-      <File FileName="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs" />
-      <File FileName="Infrastructure/Persistence/Service/ActionService.cs" />
-      <File FileName="Infrastructure/Persistence/Service/RequestService.cs" />
-      <File FileName="Infrastructure/Persistence/UnitOfWorks/UnitOfWork.cs" />
-      <File FileName="Infrastructure/Persistence/Repository/Repository.cs" />
-      <File FileName="Core/Domain/Entities/User.cs" />
-      <File FileName="Core/Application/DTOs/RegisterDto.cs" />
+      <File FileName="Presentation/Api/Controllers/RequestController.cs" Line="69" Column="2" />
+      <File FileName="Core/Application/Interfaces/Service/IRequestService.cs" Line="17" Column="1" />
+      <File FileName="Core/Domain/Entities/Request.cs" Line="15" Column="8" />
+      <File FileName="Core/Application/DTOs/RequestDto.cs" Line="14" Column="1" />
+      <File FileName="Core/Application/DTOs/ActionDto.cs" Line="5" Column="1" />
+      <File FileName="Presentation/Api/Controllers/ActionController.cs" />
+      <File FileName="Core/Application/DTOs/RegisterDto.cs" Line="1" Column="1" />
+      <File FileName="Presentation/Api/Controllers/fController.cs" Line="7" Column="1" />
+      <File FileName="Presentation/Api/Controllers/AuthController.cs" Line="6" Column="26" />
+      <File FileName="Infrastructure/Persistence/Context/AppDbContext.cs" Line="16" Column="8" />
+      <File FileName="Presentation/Api/appsettings.json" Line="20" Column="1" />
+      <File FileName="Infrastructure/Persistence/Migrations/20250123212826_hMigration.cs" Line="1" Column="1" />
+      <File FileName="Infrastructure/Persistence/Migrations/20250123212826_hMigration.Designer.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/DTOs/AuthResponse.cs" Line="1" Column="1" />
+      <File FileName="Core/Application/DTOs/LoginDto.cs" Line="1" Column="1" />
+      <File FileName="Core/Domain/Entities/Actions.cs" Line="19" Column="12" />
+      <File FileName="Core/Application/Interfaces/UnitOfWorks/IUnitOfWork.cs" Line="18" Column="2" />
+      <File FileName="Infrastructure/Persistence/UnitOfWorks/UnitOfWork.cs" Line="44" Column="2" />
+      <File FileName="Infrastructure/Persistence/DependencyInjection/ServiceContainer.cs" Line="68" Column="2" />
+      <File FileName="Infrastructure/Persistence/Repository/Repository.cs" Line="55" Column="1" />
+      <File FileName="Core/Application/Interfaces/Repository/IRepository.cs" Line="5" Column="2" />
+      <File FileName="Core/Application/Interfaces/Service/IAuthService.cs" Line="1" Column="1" />
+      <File FileName="Infrastructure/Persistence/Service/RequestService.cs" Line="26" Column="39" />
+      <File FileName="Infrastructure/Persistence/Service/ActionService.cs" Line="6" Column="1" />
+      <File FileName="Core/Domain/Entities/User.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,17 +43,37 @@
             <Node name="Core" expanded="True">
               <Node name="Application">
                 <Node name="DTOs" expanded="True" />
+                <Node name="Interfaces">
+                  <Node name="UnitOfWorks" expanded="True" />
+                </Node>
               </Node>
               <Node name="Domain">
                 <Node name="Entities" expanded="True" />
               </Node>
             </Node>
+            <Node name="Infrastructure">
+              <Node name="Persistence">
+                <Node name="Context" expanded="True" />
+                <Node name="DependencyInjection" expanded="True" />
+                <Node name="Service">
+                  <Node name="RequestService.cs" selected="True" />
+                </Node>
+                <Node name="UnitOfWorks" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Presentation">
+              <Node name="Api">
+                <Node name="Controllers" expanded="True" />
+              </Node>
+            </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="Request and Action Management System with Authorized User Relations" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

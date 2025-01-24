@@ -8,8 +8,8 @@
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/Application.AssemblyInfoInputs.cache
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/Application.AssemblyInfo.cs
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/Application.csproj.CoreCompileInputs.cache
+/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/Application.csproj.CopyComplete
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/Application.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/refint/Application.dll
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/Application.pdb
 /Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/ref/Application.dll
-/Users/zeynepkuri/Projects/Request and Action Management System with Authorized User Relations/Core/Application/obj/Debug/net7.0/Application.csproj.CopyComplete

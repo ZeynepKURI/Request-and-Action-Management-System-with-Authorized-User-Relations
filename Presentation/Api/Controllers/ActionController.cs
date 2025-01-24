@@ -1,12 +1,14 @@
 using Application.DTOs;
 using Application.Interfaces.Service;
-using Microsoft.AspNetCore.Authorization;
+using Humanizer;
 using Microsoft.AspNetCore.Mvc;
+using Persistence.Service;
 
-namespace WebAPI.Controllers
+namespace Api.Controllers
 {
-    [Route("api/[controller]")]
+
     [ApiController]
+    [Route("api/[controller]")]
     public class ActionController : ControllerBase
     {
         private readonly IActionService _actionService;
@@ -16,77 +18,34 @@ namespace WebAPI.Controllers
             _actionService = actionService;
         }
 
-        // Kullanıcıların aksiyonları görmesi sağlanır.
-        [HttpGet]
-        [Authorize(Policy = "User")]
-        public async Task<IActionResult> GetAllActions()
+        [HttpGet("ByRequest/{requestId}")]
+        public async Task<IActionResult> GetActionsByRequestId(int requestId)
         {
-            var actions = await _actionService.GetAllActionsAsync();
+            var actions = await _actionService.GetActionsByRequestIdAsync(requestId);
             return Ok(actions);
         }
 
-        // Aksiyon ID'ye göre alınabilir.
-        [HttpGet("{id}")]
-        [Authorize(Policy = "User")]
-        public async Task<IActionResult> GetActionById(int id)
+        [HttpPost]
+        public async Task<IActionResult> AddAction([FromBody] ActionDto dto)
         {
             try
             {
-                var action = await _actionService.GetActionByIdAsync(id);
-                return Ok(action);
+
+
+                await _actionService.AddActionAsync(dto);
+                return Ok("Success");
             }
+
             catch (Exception ex)
             {
-                return NotFound(ex.Message);
+                {
+                    return BadRequest(ex.Message);
+                }
             }
-        }
 
-        // Adminler aksiyon oluşturabilir, atanan kullanıcıyı belirleyebilir
-        [HttpPost]
-        [Authorize(Policy = "Admin")]
-        public async Task<IActionResult> CreateAction([FromBody] ActionDto actionDto)
-        {
-            try
-            {
-                await _actionService.CreateActionAsync(actionDto);
-                return CreatedAtAction(nameof(GetActionById), new { id = actionDto.Id }, actionDto);
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(ex.Message);
-            }
-        }
-
-        // Adminler aksiyon güncelleyebilir
-        [HttpPut("{id}")]
-        [Authorize(Policy = "Admin")]
-        public async Task<IActionResult> UpdateAction(int id, [FromBody] ActionDto actionDto)
-        {
-            try
-            {
-                await _actionService.UpdateActionAsync(id, actionDto);
-                return NoContent();
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(ex.Message);
-            }
-        }
-
-        // Adminler aksiyon silebilir
-        [HttpDelete("{id}")]
-        [Authorize(Policy = "Admin")]
-        public async Task<IActionResult> DeleteAction(int id)
-        {
-            try
-            {
-                await _actionService.DeleteActionAsync(id);
-                return NoContent();
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(ex.Message);
-            }
         }
     }
 }
+
+    
+

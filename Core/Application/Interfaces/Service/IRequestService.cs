@@ -3,16 +3,15 @@ using Application.DTOs;
 
 namespace Application.Interfaces.Service
 {
-  public interface IRequestService
-        {
-            Task<IEnumerable<RequestDto>> GetAllRequestsAsync();
-            Task<RequestDto> GetRequestByIdAsync(int id);
-            Task CreateRequestAsync(RequestDto requestDto);
-            Task UpdateRequestAsync(int id, RequestDto requestDto);
-            Task DeleteRequestAsync(int id);
-            Task UpdateRequestStatusAsync(int id, string status);
-        }
+    public interface IRequestService
+    {
+        Task<RequestDto> GetRequestByIdAsync(int id);
+        Task<IEnumerable<RequestDto>> GetRequestsByUserIdAsync(int userId);
+        Task<IEnumerable<RequestDto>> GetAllRequestsAsync();
+        Task AddRequestAsync(RequestDto dto);
+        Task UpdateRequestAsync(int id, RequestDto dto);
+        Task DeleteRequestAsync(int id);
     }
 
-
+}
 
